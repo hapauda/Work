@@ -1,38 +1,34 @@
 import java.util.ArrayList;
+import nomes.we; // Certifique-se de que a classe nomes.we exista
 
 public class de {
     public static void main(String[] args) {
+        // Criação da lista para armazenar Strings
+        ArrayList<String> animal = new ArrayList<>();
 
-        ArrayList<ArrayList<String>> groceryList = new ArrayList<>();
-        ArrayList<String> food =  new ArrayList<String>();
-        food.add("apple");
-        food.add("Meat");
-        ArrayList<String> derlist =  new ArrayList<String>();
-        derlist.add("apple");
-        derlist.add("Meat");
-        derlist.set(0, "sushi");
-        derlist.remove(2);
-        derlist.clear();
+        // Adicionando elementos à lista
+        animal.add("cat");
+        
+        // Supondo que nomes.we tem um método que retorna um nome
+        nomes.we no = new nomes.we();
+        animal.add(no.getNome()); // Chamar um método que retorna uma String
 
-        ArrayList<String> foors = new ArrayList<String>();
-        ArrayList<String> fer = new ArrayList<String>();
-        fer.add("foods");
-        fer.add("fooods");
-        fer.size();
-        fer.remove(1);
-        fer.clear();
-        foors.clear();
-        fer.set(0,"New food");
-        groceryList.add(derlist);
-        groceryList.add(food);
-        System.out.println(groceryList.get(0).get(0));
+        animal.add("elefante");
+        animal.add("fish");
+        animal.add("Man");
 
+        // Iterando sobre os elementos da lista
+        for (String i : animal) {
+            System.out.println(i);
 
-
-
-
-        for(int i=0; i<food.size();i++){
-            System.out.println(food.get(i));
+            switch (i) {
+                case "cat":
+                    System.out.println("Its a cat");
+                    break;
+                default:
+                    System.out.println("I have animals");
+                    break;
+            }
         }
     }
 }
